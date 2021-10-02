@@ -1,0 +1,105 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+p,
+a {
+	color: var(--text-color);
+}
+
+.container {
+	max-width: var(--container-width);
+	margin: auto;
+}
+
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+input,
+button,
+select,
+textarea {
+	box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+	margin: 0;
+	padding: 0;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+.btn {
+	appearance: none;
+
+	display: inline-block;
+	padding: 16px;
+	border-color: transparent;
+	border-radius: 4px;
+
+	text-decoration: none;
+	font-size: 1.1rem;
+	text-transform: capitalize;
+
+	color: #fff;
+	background-color: var(--primary-color);
+	cursor: pointer;
+}
+
+.img-parent {
+	position: relative;
+	padding-bottom: 100%; /*chỉnh tỉ lệ ảnh theo ý muốn*/
+	overflow: hidden;
+}
+.img-parent::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.img-parent > img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.badge {
+	border-radius: 4px;
+	padding: 1px 6px;
+
+	font-size: 14px;
+	background-color: var(--primary-color);
+	color: #fff;
+}
+
+.sub-header {
+	font-size: 2.5rem;
+	text-align: center;
+	margin-bottom: 90px;
+}
