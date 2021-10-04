@@ -99,14 +99,14 @@ $(".to-top").on("click", function () {
  */
 const sr = ScrollReveal({
 	origin: "top",
-	distance: "100px",
+	distance: "80px",
 	duration: 2000,
 });
 // banner
-sr.reveal(".banner .introduction");
+sr.reveal(".banner .introduction", { origin: "bottom" });
 
 sr.reveal(".banner .img-parent", {
-	origin: "right",
+	origin: "top",
 });
 
 sr.reveal(".banner .socials", {
@@ -116,6 +116,7 @@ sr.reveal(".banner .socials", {
 sr.reveal(".banner .introduction .btn", {
 	delay: 1000,
 	origin: "bottom",
+	mobile: false,
 });
 
 // Project
@@ -130,9 +131,9 @@ for (let i = 0; i < projectEls.length; i++) {
 }
 
 // About
-sr.reveal(".about .detail .img-parent", { origin: "left" });
-sr.reveal(".about .detail .para", { origin: "right" });
+sr.reveal(".about .detail .img-parent", { origin: "top" });
+sr.reveal(".about .detail .para", { origin: "bottom" });
 
 // Contact
-sr.reveal(".contact .contact-info", { origin: "left" });
-sr.reveal(".contact .img-parent", { origin: "right", mobile: false });
+sr.reveal(".contact .img-parent", { origin: "top", mobile: false });
+sr.reveal(".contact .contact-info", { origin: "bottom" });
