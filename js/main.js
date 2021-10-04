@@ -45,8 +45,11 @@ $(".header li").on("click", function () {
 });
 
 // dùng media query
-function myFunction(x) {
-	if (x.matches) {
+$(window).on("resize", function () {
+	handleBreakpointChange(breakpoint);
+});
+function handleBreakpointChange(breakpoint) {
+	if (breakpoint.matches) {
 		// thêm class để thành swiper
 		$(".projects > .container").addClass("swiper").addClass("projectsSwiper");
 		$(".projects > .container > .project-wrapper").addClass("swiper-wrapper").removeClass("row");
@@ -70,9 +73,23 @@ function myFunction(x) {
 			keyboard: true,
 		});
 	} else {
-		console.log("nothing change");
+		console.log("no changes");
 	}
 }
 
-var x = window.matchMedia("(max-width: 768px)");
-myFunction(x); // Call listener function at run time
+var breakpoint = window.matchMedia("(max-width: 768px)");
+handleBreakpointChange(breakpoint); // Call listener function at run time
+
+/**
+ * back to top
+ */
+$(window).on("scroll", function () {
+	if ($(window).scrollTop() >= $(document).height() / 2) {
+		$(".to-top").addClass("on");
+	} else {
+		$(".to-top").removeClass("on");
+	}
+});
+$(".to-top").on("click", function () {
+	$("html").scrollTop(0);
+});
