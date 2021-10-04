@@ -169,9 +169,11 @@
 	}
 
 	.banner .img-parent {
-		--width: 70%;
+		--width: 80%;
 	}
+
 	.banner .container {
+		column-gap: 20px;
 		padding-left: 25px;
 		padding-right: 25px;
 	}
