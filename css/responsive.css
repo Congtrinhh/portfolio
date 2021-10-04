@@ -7,6 +7,10 @@
 	.about .container {
 		padding: 0 90px;
 	}
+
+	.contact .detail .img-parent {
+		--width: 40%;
+	}
 }
 /*  */
 @media screen and (max-width: 768px) {
@@ -205,8 +209,12 @@
 		flex-direction: column;
 	}
 
+	.about .detail {
+		align-items: center;
+	}
+
 	.about .detail .img-parent {
-		--width: 100%;
+		width: var(--width);
 	}
 
 	.about .container {
@@ -257,5 +265,9 @@
 	}
 	.projects .project:hover {
 		box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+	}
+
+	.about .detail .img-parent {
+		--width: 70%;
 	}
 }

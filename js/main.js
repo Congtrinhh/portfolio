@@ -93,3 +93,46 @@ $(window).on("scroll", function () {
 $(".to-top").on("click", function () {
 	$("html").scrollTop(0);
 });
+
+/**
+ * Scroll reveal
+ */
+const sr = ScrollReveal({
+	origin: "top",
+	distance: "100px",
+	duration: 2000,
+});
+// banner
+sr.reveal(".banner .introduction");
+
+sr.reveal(".banner .img-parent", {
+	origin: "right",
+});
+
+sr.reveal(".banner .socials", {
+	origin: "bottom",
+});
+
+sr.reveal(".banner .introduction .btn", {
+	delay: 1000,
+	origin: "bottom",
+});
+
+// Project
+const projectEls = document.querySelectorAll(".projects .project");
+for (let i = 0; i < projectEls.length; i++) {
+	sr.reveal(`.projects .project-wrapper > *:nth-child(${i + 1})`, {
+		distance: "80px",
+		origin: "bottom",
+		delay: i * 150,
+		mobile: false,
+	});
+}
+
+// About
+sr.reveal(".about .detail .img-parent", { origin: "left" });
+sr.reveal(".about .detail .para", { origin: "right" });
+
+// Contact
+sr.reveal(".contact .contact-info", { origin: "left" });
+sr.reveal(".contact .img-parent", { origin: "right", mobile: false });
