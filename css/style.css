@@ -9,13 +9,11 @@
 
 body {
 	font-family: "Open Sans", sans-serif;
+	margin-top: var(--header-height);
 }
 
 html {
 	scroll-behavior: smooth;
-}
-#app {
-	margin-top: var(--header-height);
 }
 /* Header */
 .header {
@@ -32,14 +30,16 @@ html {
 .header.scroll {
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
+.header.scroll .container {
+	height: calc(var(--header-height) - 10px);
+}
 .header.scroll .logo {
 	font-size: 1.8rem;
 }
 .header .container {
 	height: var(--header-height);
 	justify-content: space-between;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	transition: all 0.35s ease;
 }
 .header .logo {
 	font-weight: 600;
@@ -108,7 +108,8 @@ html {
 }
 .banner .introduction .desc {
 	max-width: 450px;
-	line-height: 1.6rem;
+	line-height: 2rem;
+	font-size: 1.1rem;
 }
 .banner .introduction .btn {
 	padding: 16px;
@@ -135,7 +136,7 @@ html {
 
 /* Projects */
 .projects {
-	margin-top: var(--section-margin);
+	/* margin-top: var(--section-margin); */
 }
 .projects .project-wrapper > * {
 	margin-bottom: 30px;
@@ -197,7 +198,7 @@ html {
 
 /* About */
 .about {
-	margin-top: var(--section-margin);
+	/* margin-top: var(--section-margin); */
 }
 .about .container {
 	padding: 0 120px;
@@ -216,7 +217,7 @@ html {
 
 /* Contact */
 .contact {
-	margin-top: var(--section-margin);
+	/* margin-top: var(--section-margin); */
 }
 .contact .detail {
 	display: flex;
@@ -329,4 +330,9 @@ html {
 .swiper-button-next,
 .swiper-button-prev {
 	display: flex;
+}
+
+section {
+	padding-top: 5rem;
+	padding-bottom: 2rem;
 }

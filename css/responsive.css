@@ -28,6 +28,10 @@
 		font-size: 1.5rem;
 	}
 
+	.header.scroll .container {
+		height: calc(var(--header-height) - 6px);
+	}
+
 	.header .nav-toggle {
 		display: block;
 	}
@@ -156,7 +160,7 @@
 	}
 
 	.projects .project-wrapper > * {
-		padding: 0 30px;
+		padding: 0 36px;
 	}
 
 	.banner .img-parent {
@@ -220,7 +224,7 @@
 
 	.footer .container {
 		flex-direction: column;
-		align-items: flex-start;
+		align-items: center;
 		row-gap: 20px;
 	}
 
@@ -230,7 +234,7 @@
 
 	.footer .socials li {
 		margin-left: 0;
-		margin-right: 16px;
+		margin-right: 10px;
 	}
 
 	.footer .copyright {
@@ -240,7 +244,4 @@
 	.footer .container {
 		padding: 0 15px;
 	}
-}
-
-@media screen and (max-width: 576px) {
 }
