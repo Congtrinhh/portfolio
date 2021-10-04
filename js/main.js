@@ -1,6 +1,6 @@
 // vì không lồng thẻ a bên ngoài từng project được
-$(".project").on("click", function () {
-	$(this).find(".link").trigger("click");
+$("body").on("click", ".project", function () {
+	$(this).find(".link")[0].click();
 });
 
 const sections = document.querySelectorAll("section[id]");
