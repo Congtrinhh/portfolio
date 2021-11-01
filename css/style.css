@@ -215,7 +215,7 @@ html {
 .about .detail .img-parent {
 	--width: 40%;
 	flex-basis: var(--width);
-	padding-bottom: calc(var(--width) * 0.8);
+	padding-bottom: var(--width);
 	border-radius: 15px;
 }
 .about .detail .para {
